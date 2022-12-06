@@ -7,9 +7,9 @@ export default function (props) {
     const code = () =>{
         if(process.browser)
         {
-            let more = 0
-            let incrementPersonal = 0
-            let down = 100
+            var more = 0
+            var down = 100
+
             const div = document.querySelectorAll("div")
             console.log(div);
         setTimeout(() => {
@@ -32,18 +32,16 @@ export default function (props) {
 
             setTimeout(() => {
                 const animationBoxPerson = setInterval(() => {
-                    div[4].style.opacity = `${incrementPersonal++}%`
-                    if (incrementPersonal == 100) {
+                    more == 0
+                    div[4].style.opacity = `${more++}%`
+                    if (more == 100) {
                      clearInterval(animationBoxPerson)
                     }
-                 }, 10);
+                 }, 100);
             }, 11000);
-
-           
 
             setTimeout(() => {
                 const animationBoxGPS = setInterval(() => {
-                    console.log(down);
                     div[3].style.opacity = `${down++}%`
                     div[3].style.marginRight = "auto"
                     div[3].style.position = "relative"
@@ -52,7 +50,7 @@ export default function (props) {
                      clearInterval(animationBoxGPS)
                     }
                  }, 10);
-            }, 30000); //Altere aqui o tempo em que a animação aparece denovo
+            }, 30000); 
         }, 10000);
       }
         }

@@ -47,7 +47,20 @@ div .flex{
     position: absolute;
     left: 25%;
 }
+@keyframes sideRight {
+  0%{
+    position: absolute;
+    left: 25%;
+  }
+  100%{
+    position: absolute;
+    left: 49.9%;
+    
+  }
+}
 .boxPerson{
+  animation: sideRight 1s forwards ;
+  animation-delay: 39s;
   background-color: var(--color--blue);
   width: 50%;
   height: 500px;
@@ -74,7 +87,8 @@ div .flex{
 }
 #man{
   animation: tilt-shaking 1s alternate;
-  animation-delay: 22s;
+  animation-delay: 21s;
+  transition: 2s;
 }
 .gps, .gps path{
   overflow: visible;
