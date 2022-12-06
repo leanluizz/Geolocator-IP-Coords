@@ -15,7 +15,7 @@ export default function (props) {
         setTimeout(() => {
 
             const animationBoxGPS = setInterval(() => {
-               div[3].style.opacity = `${more++}%`
+               div[4].style.opacity = `${more++}%`
                if (more == 100) {
                 clearInterval(animationBoxGPS)
                }
@@ -23,7 +23,7 @@ export default function (props) {
             
             setTimeout(() => {
                 const outAnimationGPS = setInterval(() => {
-                    div[3].style.opacity = `${down--}%`
+                    div[4].style.opacity = `${down--}%`
                     if (down == 0) {
                         clearInterval(outAnimationGPS)
                        }
@@ -33,7 +33,7 @@ export default function (props) {
             setTimeout(() => {
                 const animationBoxPerson = setInterval(() => {
                     more == 0
-                    div[4].style.opacity = `${more++}%`
+                    div[5].style.opacity = `${more++}%`
                     if (more == 100) {
                      clearInterval(animationBoxPerson)
                     }
@@ -42,10 +42,10 @@ export default function (props) {
 
             setTimeout(() => {
                 const animationBoxGPS = setInterval(() => {
-                    div[3].style.opacity = `${down++}%`
-                    div[3].style.marginRight = "auto"
-                    div[3].style.position = "relative"
-                    div[3].style.left= "0%"
+                    div[4].style.opacity = `${down++}%`
+                    div[4].style.marginRight = "auto"
+                    div[4].style.position = "relative"
+                    div[4].style.left= "0%"
                     if (down == 100) {
                      clearInterval(animationBoxGPS)
                     }

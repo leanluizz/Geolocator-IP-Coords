@@ -17,7 +17,11 @@ body{
 p{
   font-size: small;
 }
-
+.white{
+  background-color: wheat;
+  width: 500px;
+  height: 500px;
+}
 @keyframes Fly{
 0%{
   margin-left: 0;
