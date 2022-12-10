@@ -1,0 +1,30 @@
+body{
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@keyframes Fly{
+0%{
+  margin-left: 0;
+}
+100%{
+  margin-left: 105%;
+  height: 2px;
+  width: 1px;
+}
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.Rocket{
+  animation: Fly 15s infinite;
+  transform: rotate(90deg);
+  height: 190px;
+  width: 180px;
+  display: block;
+  margin-top: 20%;
+  margin-left: 0;
+  margin-right:auto;
+}
