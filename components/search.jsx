@@ -7,7 +7,7 @@ export default function (props){
     return(
         <div className={Search.box}>
             <div className={Search.Earth}>
-                <Image src={Astronaut}/>
+                <Image src={Astronaut} className={Search.gif}/>
                 <div class={Search.list}>
 
                 </div>
