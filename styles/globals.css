@@ -3,6 +3,7 @@
     font-size: medium;
   }
 }
+
 :root{
   --color--blue:rgb(35, 170, 204);
   --color--blue-hover:rgb(15, 76, 92);
@@ -16,6 +17,10 @@ body{
 .test{ background-color: white;}
 p{
   font-size: small;
+}
+li{
+  font-family: "Kids";
+  color: whitesmoke;
 }
 .white{
   background-color: wheat;

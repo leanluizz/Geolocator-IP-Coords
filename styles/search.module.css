@@ -50,7 +50,6 @@
     display: flex;
     border-radius: 12px;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     background-color:  rgba(11, 47, 71, 0.411);
     background-repeat: no-repeat;

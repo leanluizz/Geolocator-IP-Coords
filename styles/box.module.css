@@ -58,8 +58,8 @@ div .flex{
   }
 }
 .boxPerson{
-  animation: sideRight 1s forwards ;
-  animation-delay: 39s;
+  animation: sideRight 1s forwards;
+  animation-delay: 29s;
   background-color: var(--color--blue);
   width: 50%;
   height: 500px;
@@ -68,6 +68,8 @@ div .flex{
     justify-content: space-evenly;
     border-radius: 3px;
     margin-top: 5%;
+    position: absolute;
+    left: 25%;
 }
 .white{
   background-color: wheat;
@@ -101,7 +103,7 @@ div .flex{
   width: 10%;
   height: auto;
   position: relative;
-  bottom: 8%;
+  bottom: 7%;
   margin-left: auto;
   margin-right: auto;
   display: block;
