@@ -1,9 +1,8 @@
-import react from "react";
 import box from "../styles/box.module.css";
 import GPS from "../images/gps-icon.png";
 import Image from 'next/image'
 
-export default function (props) {
+export default function WhiteBox (props) {
     const code = () =>{
         if(process.browser)
         {
@@ -12,10 +11,11 @@ export default function (props) {
 
             const div = document.querySelectorAll("div")
             console.log(div);
+            
         setTimeout(() => {
 
             const animationBoxGPS = setInterval(() => {
-               div[4].style.opacity = `${more++}%`
+               div[6].style.opacity = `${more++}%`
                if (more == 100) {
                 clearInterval(animationBoxGPS)
                }
@@ -23,34 +23,24 @@ export default function (props) {
             
             setTimeout(() => {
                 const outAnimationGPS = setInterval(() => {
-                    div[4].style.opacity = `${down--}%`
+                    div[6].style.opacity = `${down--}%`
                     if (down == 0) {
                         clearInterval(outAnimationGPS)
                        }
                 }, 10);
-            }, 10000); 
-
-            setTimeout(() => {
-                const animationBoxPerson = setInterval(() => {
-                    more == 0
-                    div[5].style.opacity = `${more++}%`
-                    if (more == 100) {
-                     clearInterval(animationBoxPerson)
-                    }
-                 }, 100);
-            }, 11000);
+            }, 9000); 
 
             setTimeout(() => {
                 const animationBoxGPS = setInterval(() => {
-                    div[4].style.opacity = `${down++}%`
-                    div[4].style.marginRight = "auto"
-                    div[4].style.position = "relative"
-                    div[4].style.left= "0%"
+                    div[6].style.opacity = `${down++}%`
+                    div[6].style.marginRight = "auto"
+                    div[6].style.position = "relative"
+                    div[6].style.left= "0%"
                     if (down == 100) {
                      clearInterval(animationBoxGPS)
                     }
                  }, 10);
-            }, 30000); 
+            }, 20000); 
         }, 10000);
       }
         }
@@ -60,7 +50,7 @@ export default function (props) {
     return(
         
      <div className={box.boxGPS}>
-     <Image src={GPS}  className={box.gps} alt="GPS"  />  
+     <Image src={GPS}  className={box.gps}  alt="gps" />  
      <h1 className={box.h1GPS}>Search Coordinates or IP </ h1>
      <h2 className={box.h2GPS}>Coordinates</h2>
      <p  className={box.pGPS}>Coordinates A pair of numbers that describe the position of a point on a coordinate plane by using the horizontal and vertical distances from the two reference axes. Usually represented by (x,y) the x-value and y-value.</p>

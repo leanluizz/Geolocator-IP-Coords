@@ -35,7 +35,6 @@ p{
   display: none;
 }
 }
-
 .Rocket{
   animation: Fly 15s forwards;
   transform: rotate(90deg);
@@ -45,4 +44,7 @@ p{
   margin-left: 105%;
   margin-right:auto;
   position: absolute;
+}
+::-webkit-scrollbar{
+  display: none;
 }
