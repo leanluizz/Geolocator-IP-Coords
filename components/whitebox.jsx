@@ -10,7 +10,6 @@ export default function WhiteBox (props) {
             var down = 100
 
             const div = document.querySelectorAll("div")
-            console.log(div);
             
         setTimeout(() => {
 
@@ -22,7 +21,8 @@ export default function WhiteBox (props) {
             }, 10);
             
             setTimeout(() => {
-                const outAnimationGPS = setInterval(() => {
+                let outAnimationGPS = undefined
+                window.innerWidth <= 815 ? outAnimationGPS = null : outAnimationGPS = setInterval(() => {
                     div[6].style.opacity = `${down--}%`
                     if (down == 0) {
                         clearInterval(outAnimationGPS)
@@ -51,7 +51,7 @@ export default function WhiteBox (props) {
         
      <div className={box.boxGPS}>
      <Image src={GPS}  className={box.gps}  alt="gps" />  
-     <h1 className={box.h1GPS}>Search Coordinates or IP </ h1>
+     <h1 className={box.h1GPS}>Search Coordinates </ h1>
      <h2 className={box.h2GPS}>Coordinates</h2>
      <p  className={box.pGPS}>Coordinates A pair of numbers that describe the position of a point on a coordinate plane by using the horizontal and vertical distances from the two reference axes. Usually represented by (x,y) the x-value and y-value.</p>
      <h2 className={box.h2GPS}>IP Address</h2>

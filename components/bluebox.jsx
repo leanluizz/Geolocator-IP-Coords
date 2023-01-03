@@ -28,7 +28,7 @@ export default function Bluebox (){
     return (
         <div className={box.boxPerson}>
         <Image src={Man}  className={box.gps} id={box.man}  alt="man" />  
-        <h1 className={box.h1Person}>Search Coordinates or IP </ h1>
+        <h1 className={box.h1Person}>Search Coordinates</ h1>
         <h2 className={box.h2Person}>Coordinates</h2>
         <p  className={box.pPerson}>Coordinates A pair of numbers that describe the position of a point on a coordinate plane by using the horizontal and vertical distances from the two reference axes. Usually represented by (x,y) the x-value and y-value.</p>
         <h2 className={box.h2Person}>IP Address</h2>

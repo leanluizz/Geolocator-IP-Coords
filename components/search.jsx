@@ -1,22 +1,34 @@
-import react from "react";
+import react, { useEffect, useState } from "react";
 import Search from "../styles/search.module.css"
 import Astronaut from "../images/astronaut.gif"
 import Image from "next/image"
 
 export default function Sear (props){
+    
+    const listKeys = []
+    const listValues = []
+    const [data , setdata] = useState({})
 
-    //Os 2 Arrays tem que ter o mesmo número de dados
+    useEffect(() => {
+        const geoLoc = (pos) => {
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&format=json`)
+        .then(response => response.json())
+        .then(response => setdata(response.address))
+    }
+    navigator.geolocation.getCurrentPosition(geoLoc)
+    }, [])
 
-    const listKeys = ["Local", "Rua", "Endereço", "Nº"]
-    const listValues = ["CNL", "Levindo Lana da Silva", "Rochedo", "250"]
-
+   listKeys.push(Object.keys(data))
+   listValues.push(Object.values(data))
+   const values = listValues[0]
+   
     return(
         <div className={Search.box}>
             <div className={Search.Earth}>
-                <Image src={Astronaut} className={Search.gif}/>
-                <div class={Search.list}>
+                <Image src={Astronaut} className={Search.gif} alt="Astronaut"/>
+                <div className={Search.list}>
                     <ul>
-                  {listKeys.map((e, i) => <li type="none">{e} : {listValues[i]}</li>)}
+                  {listKeys[0].map((e, i) => <li type="none" key={e}>{e} : {values[i]} </li>)}
                     </ul>  
                 </div>
             </div>
