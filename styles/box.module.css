@@ -23,7 +23,6 @@
 }
 div .flex{
  display: flex;
- justify-content: space-around;
  flex-direction: row;
 }
 
@@ -47,7 +46,20 @@ div .flex{
     position: absolute;
     left: 25%;
 }
+@keyframes sideRight {
+  0%{
+    position: absolute;
+    left: 25%;
+  }
+  100%{
+    position: absolute;
+    left: 49.9%;
+    
+  }
+}
 .boxPerson{
+  animation: sideRight 1s forwards;
+  animation-delay: 29s;
   background-color: var(--color--blue);
   width: 50%;
   height: 500px;
@@ -56,6 +68,13 @@ div .flex{
     justify-content: space-evenly;
     border-radius: 3px;
     margin-top: 5%;
+    position: absolute;
+    left: 25%;
+}
+.white{
+  background-color: wheat;
+  width: 500px;
+  height: 500px;
 }
 @keyframes Bounce{
     0%, 20%,50%{transform: scale(0.9, 1); } 80% {transform: translateY(0);transform: scale(0.7, 1); } 
@@ -74,7 +93,8 @@ div .flex{
 }
 #man{
   animation: tilt-shaking 1s alternate;
-  animation-delay: 22s;
+  animation-delay: 21s;
+  transition: 2s;
 }
 .gps, .gps path{
   overflow: visible;
@@ -83,7 +103,7 @@ div .flex{
   width: 10%;
   height: auto;
   position: relative;
-  bottom: 8%;
+  bottom: 7%;
   margin-left: auto;
   margin-right: auto;
   display: block;
