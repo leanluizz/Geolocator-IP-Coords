@@ -5,18 +5,25 @@ import Image from "next/image"
 
 export default function Sear (props){
     
-    const listKeys = []
-    const listValues = []
+    let listKeys = []
+    let listValues = []
     const [data , setdata] = useState({})
 
-    useEffect(() => {
-        const geoLoc = (pos) => {
-        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&format=json`)
-        .then(response => response.json())
-        .then(response => setdata(response.address))
+
+    try {
+        useEffect(() => {
+            const geoLoc = (pos) => {
+            fetch(`https://nominatim.openstreetmap.org/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&format=json`)
+            .then(response => response.json())
+            .then(response => setdata(response.address))
+        }
+        navigator.geolocation.getCurrentPosition(geoLoc)
+        }, [])
+        
+    } catch (error) {
+        const erro = "Networking error" 
+         listKeys = erro
     }
-    navigator.geolocation.getCurrentPosition(geoLoc)
-    }, [])
 
    listKeys.push(Object.keys(data))
    listValues.push(Object.values(data))
@@ -28,7 +35,7 @@ export default function Sear (props){
                 <Image src={Astronaut} className={Search.gif} alt="Astronaut"/>
                 <div className={Search.list}>
                     <ul>
-                  {listKeys[0].map((e, i) => <li type="none" key={e}>{e} : {values[i]} </li>)}
+                  {listKeys[0].map((e, i) => <li type="none" className={Search.list} key={e}>{e} : {values[i]} </li>)}
                     </ul>  
                 </div>
             </div>

@@ -16,7 +16,7 @@ export default function Bluebox (){
             const animationBoxPerson = setInterval(() => {
                 setmore(more++)
 
-                div[7].style.opacity = `${more}%`
+                div[8].style.opacity = `${more}%`
                 if (more == 100) {
                     setmore(100)
                  clearInterval(animationBoxPerson)
