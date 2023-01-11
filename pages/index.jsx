@@ -13,7 +13,7 @@ export default function Home() {
   const code = () =>{
     if(process.browser)
     {
-      const [Rocket] = useState(document.querySelector(".Rocket"))
+      const Rocket = document.querySelector(".Rocket")
       let div = document.querySelectorAll("div")
       useEffect(() => {
         setTimeout(() => {

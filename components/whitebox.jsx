@@ -15,7 +15,7 @@ export default function WhiteBox (props) {
         setTimeout(() => {
 
             const animationBoxGPS = setInterval(() => {
-               div[7].style.opacity = `${more++}%`
+               div[8].style.opacity = `${more++}%`
                if (more == 100) {
                 clearInterval(animationBoxGPS)
                }
@@ -24,7 +24,7 @@ export default function WhiteBox (props) {
             setTimeout(() => {
                 let outAnimationGPS = undefined
                 window.innerWidth <= 815 ? outAnimationGPS = null : outAnimationGPS = setInterval(() => {
-                    div[7].style.opacity = `${down--}%`
+                    div[8].style.opacity = `${down--}%`
                     if (down == 0) {
                         clearInterval(outAnimationGPS)
                        }
@@ -33,10 +33,10 @@ export default function WhiteBox (props) {
 
             setTimeout(() => {
                 const animationBoxGPS = setInterval(() => {
-                    div[7].style.opacity = `${down++}%`
-                    div[7].style.marginRight = "auto"
-                    div[7].style.position = "relative"
-                    div[7].style.left= "0%"
+                    div[8].style.opacity = `${down++}%`
+                    div[8].style.marginRight = "auto"
+                    div[8].style.position = "relative"
+                    div[8].style.left= "0%"
                     if (down == 100) {
                      clearInterval(animationBoxGPS)
                     }
