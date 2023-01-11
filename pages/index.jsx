@@ -14,6 +14,7 @@ export default function Home() {
     {
       const [Rocket] = useState(document.querySelector(".Rocket"))
       let div = document.querySelectorAll("div")
+      
       useEffect(() => {
         setTimeout(() => {
           if (Rocket) {
@@ -21,7 +22,7 @@ export default function Home() {
           }else{
             false
           }
-        window.innerWidth <= 815 ? div[7].style.opacity = "100%" : null
+        window.innerWidth <= 815 ? div[8].style.opacity = "100%" : null
         }, 10000);
       }, []) 
   }

@@ -1,11 +1,12 @@
 import box from "../styles/box.module.css";
 import GPS from "../images/gps-icon.png";
 import Image from 'next/image'
+import { useEffect } from "react";
 
 export default function WhiteBox (props) {
     const code = () =>{
-        if(process.browser)
-        {
+        if (process.browser){
+        useEffect (() => {
             var more = 0
             var down = 100
 
@@ -43,7 +44,8 @@ export default function WhiteBox (props) {
                  }, 10);
             }, 20000); 
         }, 10000);
-      }
+        }, [])
+    }
         }
         code()
 

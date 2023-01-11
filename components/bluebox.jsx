@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function Bluebox (){
 
+    const code = () =>{
     if(process.browser){
         var [more, setmore] = useState(0);
 
@@ -24,6 +25,8 @@ export default function Bluebox (){
              }, 10)
         }, 20000)}, [])
     }
+}
+code()
 
     return (
         <div className={box.boxPerson}>
