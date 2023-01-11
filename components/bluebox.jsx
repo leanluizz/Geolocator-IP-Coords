@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 
 export default function Bluebox (){
 
-    const code = () =>{
     if(process.browser){
         var [more, setmore] = useState(0);
 
@@ -17,7 +16,7 @@ export default function Bluebox (){
             const animationBoxPerson = setInterval(() => {
                 setmore(more++)
 
-                div[8].style.opacity = `${more}%`
+                div[9].style.opacity = `${more}%`
                 if (more == 100) {
                     setmore(100)
                  clearInterval(animationBoxPerson)
@@ -25,8 +24,6 @@ export default function Bluebox (){
              }, 10)
         }, 20000)}, [])
     }
-}
-code()
 
     return (
         <div className={box.boxPerson}>

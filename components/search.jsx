@@ -4,11 +4,16 @@ import Astronaut from "../images/astronaut.gif"
 import Image from "next/image"
 
 export default function Sear (props){
-    
+
+    fetch("https://maps.google.com", {
+       header: {'Access-Control-Allow-Origin': 'http://localhost:3000'},
+       mode:"no-cors"
+    })
+    .then(response => console.log(response))
+
     let listKeys = []
     let listValues = []
     const [data , setdata] = useState({})
-
 
     try {
         useEffect(() => {
@@ -21,14 +26,12 @@ export default function Sear (props){
         }, [])
         
     } catch (error) {
-        const erro = "Networking error" 
-         listKeys = erro
+        console.log(error)
     }
 
    listKeys.push(Object.keys(data))
    listValues.push(Object.values(data))
    const values = listValues[0]
-   
     return(
         <div className={Search.box}>
             <div className={Search.Earth}>
