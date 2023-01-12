@@ -5,12 +5,6 @@ import Image from "next/image"
 
 export default function Sear (props){
 
-    fetch("https://maps.google.com", {
-       header: {'Access-Control-Allow-Origin': 'http://localhost:3000'},
-       mode:"no-cors"
-    })
-    .then(response => console.log(response))
-
     let listKeys = []
     let listValues = []
     const [data , setdata] = useState({})
